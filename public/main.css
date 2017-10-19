@@ -12,3 +12,8 @@ body {
   border: 1px solid black;
   background-color: silver;
 }
+
+#header {
+  color: #D4AF37;
+  font-size: 40px;
+}

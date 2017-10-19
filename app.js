@@ -5,11 +5,19 @@ var app = function() {
   var xRef = 255;
   var yRef = 177;
 
+  var img = document.createElement("img");
+  img.src = "public/harrison.png"
+
+  var drawHarrison = function(x,y){
+    context.drawImage(img, x, y, 30,30)
+  }
+
   var drawFunction = function(x, y){
-    context.beginPath()
-    context.moveTo(xRef, yRef)
-    context.lineTo(x, y);
-    context.stroke();
+    drawHarrison(x,y);
+    // context.beginPath()
+    // context.moveTo(xRef, yRef)
+    // context.lineTo(x, y);
+    // context.stroke();
   }
 
 
