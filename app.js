@@ -2,8 +2,8 @@ var app = function() {
   var canvas = document.getElementById('main-canvas');
   var context = canvas.getContext('2d');
 
-  var xRef = 300;
-  var yRef = 250;
+  var xRef = 255;
+  var yRef = 177;
 
   var drawFunction = function(x, y){
     context.beginPath()
@@ -19,30 +19,24 @@ var app = function() {
     var movingY = yRef;
 
     //if we press up, decrease x, down increase x
-    if(event.keyCode === 38 && movingX !== 0){
+    if(event.keyCode === 38 && movingY !== 0){
       movingY -= 5;
     };
     // down
-    if(event.keyCode === 40 && movingX < 600){
+    if(event.keyCode === 40 && movingY < 500){
       movingY += 5;
     };
     // left
-    if(event.keyCode === 37 && movingY !== 0){
+    if(event.keyCode === 37 && movingX !== 0){
       movingX -= 5;
     };
     // right
-    if(event.keyCode === 39 && movingY < 500){
+    if(event.keyCode === 39 && movingX < 600){
       movingX += 5;
     };
     drawFunction(movingX, movingY);
     xRef = movingX;
     yRef = movingY;
-    // console.log("keycode:", event.keyCode);
-    // console.log("x: ", movingX);
-    // console.log("y: ", movingY);
-
-
-    //change x & y ref to represent stop point.
   })
 }
 
